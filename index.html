@@ -44,36 +44,54 @@
 <body>
   <div class="container">
     <header class="text-center my-4">
-      <h1>WhiskerDE - Access things freely.</h1>
-      <p>The newer Linux DE that is easy to use.</p>
+      <h1 id="title">WhiskerDE - Access things freely.</h1>
+      <p id="subtitle">The newer Linux DE that is easy to use.</p>
+      <select id="language-selector" class="form-control w-25 mx-auto">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+      </select>
     </header>
     <section>
-      <h1 class="mb-4">Features</h1>
+      <h1 class="mb-4" id="features-title">Features</h1>
       <div class="card">
         <div class="card-body">
-          <p>A easy to use GUI.</p>
+          <p class="feature" data-en="A easy to use GUI." data-es="Una GUI fácil de usar.">A easy to use GUI.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <p>A easy to use WM GUI.</p>
+          <p class="feature" data-en="A easy to use WM GUI." data-es="Una GUI WM fácil de usar.">A easy to use WM GUI.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <p>A easy to use system panel.</p>
+          <p class="feature" data-en="A easy to use system panel." data-es="Un panel del sistema fácil de usar.">A easy to use system panel.</p>
         </div>
       </div>
     </section>
     <footer class="text-center mt-4">
-      <p>The WhiskerDE group (2024) - GNU General Public License</p>
+      <p id="footer-text">The WhiskerDE group (2024) - GNU General Public License</p>
     </footer>
   </div>
   <!-- Bootstrap JS and dependencies -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('language-selector').addEventListener('change', function() {
+      var lang = this.value;
+      document.getElementById('title').textContent = lang === 'es' ? 'WhiskerDE - Accede a las cosas libremente.' : 'WhiskerDE - Access things freely.';
+      document.getElementById('subtitle').textContent = lang === 'es' ? 'El nuevo DE de Linux que es fácil de usar.' : 'The newer Linux DE that is easy to use.';
+      document.getElementById('features-title').textContent = lang === 'es' ? 'Características' : 'Features';
+      var features = document.querySelectorAll('.feature');
+      features.forEach(function(feature) {
+        feature.textContent = feature.getAttribute('data-' + lang);
+      });
+      document.getElementById('footer-text').textContent = lang === 'es' ? 'El grupo WhiskerDE (2024) - Licencia Pública General de GNU' : 'The WhiskerDE group (2024) - GNU General Public License';
+    });
+  </script>
 </body>
 </html>
+
 
 
