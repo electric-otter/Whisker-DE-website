@@ -1,164 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WhiskerDE</title>
-  <!-- Google Fonts for modern typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- LottieFiles Animation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.10/lottie.min.js"></script>
-  <!-- Bootstrap 5.3 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f4f7fc;
-      color: #333;
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    h1, h2 {
-      color: #1d3557;
-      font-weight: 600;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    }
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-    header {
-      background-color: #1d3557;
-      color: white;
-      padding: 3rem 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    header a {
-      color: white;
-      font-size: 1.5rem;
-      text-decoration: none;
-      display: block;
-      margin-top: 1rem;
-    }
-    header a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-    .card {
-      background-color: white;
-      border: none;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-    }
-    .card:hover {
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      transform: translateY(-5px);
-    }
-    .card-title {
-      font-size: 1.75rem;
-      font-weight: 600;
-      color: #1d3557;
-    }
-    .card-body {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-    footer {
-      background-color: #1d3557;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.875rem;
-    }
-    footer a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    .download-btn {
-      padding: 1rem 2rem;
-      background-color: #ff6f61;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.125rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .download-btn:hover {
-      background-color: #ff4a3d;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisker Linux</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #282c34;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        footer {
+            background-color: #282c34;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .license {
+            font-size: 0.8em;
+            margin-top: 10px;
+            color: #ddd;
+        }
+
+        a {
+            color: #61dafb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .main-content p {
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .download-btn {
+            background-color: #61dafb;
+            color: #fff;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            background-color: #4fa3e1;
+        }
+    </style>
 </head>
+
 <body>
+    <header>
+        <h1>Whisker Linux</h1>
+    </header>
 
-  <!-- Header Section -->
-  <header>
-    <div id="lottie-animation" style="height: 250px; width: 250px; margin: 0 auto;"></div>
-    <h1>Welcome to WhiskerDE</h1>
-    <p>Your freedom to customize and explore the open-source desktop environment.</p>
-    <a href="https://github.com/WhiskerDE" target="_blank">Visit the GitHub repository</a>
-  </header>
+    <section class="content main-content">
+        <h2>Welcome to Whisker Linux</h2>
+        <p>Whisker Linux is a fast, secure, and customizable Linux operating system designed for modern computing. It brings together the best of Debian with powerful optimizations, offering a clean and intuitive user experience.</p>
 
-  <!-- Main Content Section -->
-  <main>
-    <div class="card">
-      <h2 class="card-title">What is WhiskerDE?</h2>
-      <div class="card-body">
-        <p>WhiskerDE is a modern, lightweight, and customizable desktop environment built for simplicity and efficiency. With an intuitive interface and powerful features, it's the perfect choice for users who appreciate minimalism and flexibility.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2 class="card-title">Features</h2>
-      <div class="card-body">
+        <h2>Features</h2>
+        <p>Whisker Linux comes with a wide range of features that are designed to enhance your productivity and security:</p>
         <ul>
-          <li>Fully customizable user interface</li>
-          <li>Efficient performance for older hardware</li>
-          <li>Easy integration with your favorite Linux distributions</li>
-          <li>Powerful, user-friendly tools for daily use</li>
+            <li>Stable base from Debian</li>
+            <li>Customizable desktop environment</li>
+            <li>Optimized for performance</li>
+            <li>Minimalistic yet powerful design</li>
         </ul>
-      </div>
-    </div>
 
-    <button class="download-btn" onclick="window.location.href='https://github.com/WhiskerDE/Download'">Download WhiskerDE</button>
-  </main>
+        <h2>Download Whisker Linux</h2>
+        <p>Get the latest release of Whisker Linux from our GitHub page:</p>
+        <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="download-btn" target="_blank">Download Latest Release</a>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2024 WhiskerDE. All Rights Reserved.</p>
-    <p><a href="https://github.com/WhiskerDE" target="_blank">View on GitHub</a></p>
-  </footer>
-
-  <!-- Lottie Animation Initialization -->
-  <script>
-    var animation = lottie.loadAnimation({
-      container: document.getElementById('lottie-animation'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'https://assets7.lottiefiles.com/packages/lf20_YhnByS.json'  // Replace with your Lottie JSON path
-    });
-  </script>
-
-  <!-- Bootstrap JS (optional for interactive elements like modals) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+    <footer>
+        <p>&copy; 2024 Whisker Linux</p>
+        <p class="license">
+            This project is licensed under the <a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank">GNU General Public License v3.0</a>.
+        </p>
+    </footer>
 </body>
-</html>
 
+</html>
