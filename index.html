@@ -10,29 +10,25 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #181818;
+      background-color: #121212;
       color: #fff;
       font-family: Arial, sans-serif;
     }
-    h1 {
+    h1, h2 {
       color: #fff;
     }
     p {
       font-size: 1.25rem;
     }
     header, footer {
-      background-color: #202020;
+      background-color: #1f1f1f;
       color: white;
       padding: 1rem 0;
     }
     .card {
-      background-color: #282828;
+      background-color: #242424;
       border: none;
       margin-bottom: 1rem;
-    }
-    .card-header, .card-footer {
-      background-color: #202020;
-      border: none;
     }
     .card-body {
       color: white;
@@ -44,14 +40,35 @@
     .feature-icon {
       margin-right: 0.5rem;
     }
+    .github-icon {
+      color: white;
+      font-size: 1.5rem;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    .list-unstyled li {
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="text-center my-4">
-      <h1 id="title">WhiskerDE - Access things freely.</h1>
-      <p id="subtitle">The newer Linux DE that is easy to use.</p>
-      <select id="language-selector" class="form-control w-25 mx-auto">
+  <header class="d-flex justify-content-between align-items-center px-4">
+    <h1 id="title">WhiskerDE</h1>
+    <a href="https://github.com/electric-otter/Whisker-DE" target="_blank" class="github-icon">
+      <i class="fab fa-github"></i>
+    </a>
+  </header>
+  <main class="container">
+    <div class="text-center mt-4">
+      <h2 id="subtitle">Access things freely.</h2>
+      <p>The newer Linux DE that is easy to use.</p>
+      <select id="language-selector" class="form-control w-25 mx-auto mb-2">
         <option value="en">English</option>
         <option value="es">Spanish</option>
       </select>
@@ -63,9 +80,9 @@
         <li><i class="fas fa-bug feature-icon"></i>Report issues and bugs</li>
         <li><i class="fas fa-code-branch feature-icon"></i>Contribute to our codebase</li>
       </ul>
-    </header>
+    </div>
     <section>
-      <h1 class="mb-4" id="features-title">Features</h1>
+      <h2 class="mb-4" id="features-title">Features</h2>
       <div class="card">
         <div class="card-body">
           <p class="feature" data-en="<i class='fas fa-desktop feature-icon'></i>A easy to use GUI." data-es="<i class='fas fa-desktop feature-icon'></i>Una GUI fácil de usar."><i class="fas fa-desktop feature-icon"></i>A easy to use GUI.</p>
@@ -87,10 +104,10 @@
         </div>
       </div>
     </section>
-    <footer class="text-center mt-4">
-      <p id="footer-text">The WhiskerDE group (2024) - GNU General Public License</p>
-    </footer>
-  </div>
+  </main>
+  <footer class="text-center mt-4">
+    <p id="footer-text">The WhiskerDE group (2024) - GNU General Public License</p>
+  </footer>
   <!-- Bootstrap JS and dependencies -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
