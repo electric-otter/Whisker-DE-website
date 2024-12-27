@@ -66,47 +66,47 @@
   </header>
   <main class="container">
     <div class="text-center mt-4">
-      <h2 id="subtitle">Access things freely.</h2>
-      <p>The newer Linux DE that is easy to use.</p>
+      <h2 id="subtitle">Access things freely, with simplicity and efficiency.</h2>
+      <p>WhiskerDE is a modern and user-friendly Linux Desktop Environment designed for those who value a clean interface, performance, and openness.</p>
       <select id="language-selector" class="form-control w-25 mx-auto mb-2">
         <option value="en">English</option>
         <option value="es">Spanish</option>
       </select>
       <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="btn btn-primary mt-2">Download Latest Release (v1.0.0)</a>
-      <p class="mt-4">We just launched! Be one of the first to support WhiskerDE and help us grow.</p>
-      <p>Here's how you can help:</p>
+      <p class="mt-4">We're excited to announce our launch! Join our journey and become part of the WhiskerDE community.</p>
+      <p>Here's how you can help us improve and grow:</p>
       <ul class="list-unstyled">
-        <li><i class="fas fa-users feature-icon"></i>Join our community</li>
-        <li><i class="fas fa-bug feature-icon"></i>Report issues and bugs</li>
-        <li><i class="fas fa-code-branch feature-icon"></i>Contribute to our codebase</li>
+        <li><i class="fas fa-users feature-icon"></i>Join our community forums and chat</li>
+        <li><i class="fas fa-bug feature-icon"></i>Report bugs or issues you encounter</li>
+        <li><i class="fas fa-code-branch feature-icon"></i>Contribute to our open-source codebase</li>
       </ul>
     </div>
     <section>
       <h2 class="mb-4" id="features-title">Features</h2>
       <div class="card">
         <div class="card-body">
-          <p class="feature" data-en="<i class='fas fa-desktop feature-icon'></i>A easy to use GUI." data-es="<i class='fas fa-desktop feature-icon'></i>Una GUI fácil de usar."><i class="fas fa-desktop feature-icon"></i>A easy to use GUI.</p>
+          <p class="feature" data-en="<i class='fas fa-desktop feature-icon'></i>An intuitive and user-friendly GUI." data-es="<i class='fas fa-desktop feature-icon'></i>Una interfaz gráfica intuitiva y fácil de usar."><i class="fas fa-desktop feature-icon"></i>An intuitive and user-friendly GUI for seamless navigation.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <p class="feature" data-en="<i class='fas fa-window-maximize feature-icon'></i>A easy to use WM GUI." data-es="<i class='fas fa-window-maximize feature-icon'></i>Una GUI WM fácil de usar."><i class="fas fa-window-maximize feature-icon"></i>A easy to use WM GUI.</p>
+          <p class="feature" data-en="<i class='fas fa-window-maximize feature-icon'></i>A customizable window manager GUI." data-es="<i class='fas fa-window-maximize feature-icon'></i>Una GUI personalizable de gestor de ventanas."><i class="fas fa-window-maximize feature-icon"></i>A customizable window manager GUI for managing windows efficiently.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <p class="feature" data-en="<i class='fas fa-cogs feature-icon'></i>A easy to use system panel." data-es="<i class='fas fa-cogs feature-icon'></i>Un panel del sistema fácil de usar."><i class="fas fa-cogs feature-icon"></i>A easy to use system panel.</p>
+          <p class="feature" data-en="<i class='fas fa-cogs feature-icon'></i>An easy-to-use system control panel." data-es="<i class='fas fa-cogs feature-icon'></i>Un panel de control del sistema fácil de usar."><i class="fas fa-cogs feature-icon"></i>An easy-to-use system control panel for configuration and management.</p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
-          <p class="feature" data-en="<i class='fas fa-code-branch feature-icon'></i>Open source and community supported." data-es="<i class='fas fa-code-branch feature-icon'></i>Código abierto y soportado por la comunidad."><i class="fas fa-code-branch feature-icon"></i>Open source and community supported.</p>
+          <p class="feature" data-en="<i class='fas fa-code-branch feature-icon'></i>Open-source and community-supported." data-es="<i class='fas fa-code-branch feature-icon'></i>Código abierto y respaldado por la comunidad."><i class="fas fa-code-branch feature-icon"></i>Open-source and community-supported, allowing for contributions and improvements.</p>
         </div>
       </div>
     </section>
   </main>
   <footer class="text-center mt-4">
-    <p id="footer-text">The WhiskerDE group (2024) - GNU General Public License</p>
+    <p id="footer-text">WhiskerDE Group (2024) - Licensed under the GNU General Public License</p>
   </footer>
   <!-- Bootstrap JS and dependencies -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -116,13 +116,13 @@
     document.getElementById('language-selector').addEventListener('change', function() {
       var lang = this.value;
       document.getElementById('title').innerHTML = lang === 'es' ? 'WhiskerDE - Accede a las cosas libremente.' : 'WhiskerDE - Access things freely.';
-      document.getElementById('subtitle').innerHTML = lang === 'es' ? 'El nuevo DE de Linux que es fácil de usar.' : 'The newer Linux DE that is easy to use.';
+      document.getElementById('subtitle').innerHTML = lang === 'es' ? 'Un entorno de escritorio Linux fácil de usar y moderno.' : 'WhiskerDE is a modern and user-friendly Linux Desktop Environment designed for those who value a clean interface, performance, and openness.';
       document.getElementById('features-title').innerHTML = lang === 'es' ? 'Características' : 'Features';
       var features = document.querySelectorAll('.feature');
       features.forEach(function(feature) {
         feature.innerHTML = feature.getAttribute('data-' + lang);
       });
-      document.getElementById('footer-text').innerHTML = lang === 'es' ? 'El grupo WhiskerDE (2024) - Licencia Pública General de GNU' : 'The WhiskerDE group (2024) - GNU General Public License';
+      document.getElementById('footer-text').innerHTML = lang === 'es' ? 'El grupo WhiskerDE (2024) - Licencia Pública General de GNU' : 'WhiskerDE Group (2024) - Licensed under the GNU General Public License';
     });
   </script>
 </body>
