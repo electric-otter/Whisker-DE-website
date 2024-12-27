@@ -100,6 +100,15 @@
       padding: 20px;
       margin-top: 2rem;
     }
+    .license-section {
+      background-color: #fff;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-top: 2px solid #007bff;
+    }
+    .license-section h4 {
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -179,27 +188,29 @@
       </div>
     </section>
 
-<section class="security-tips">
-<section class="security-tips">
-  <h4>How to Keep Your Linux System Secure</h4>
-  <p>Although Linux systems are generally more secure, it's important to follow best practices to ensure your system remains safe. Here are some important security tips:</p>
-  <ul>
-    <li><strong>Keep your system up to date (Optional):</strong> Regularly update your system to install the latest security patches and updates from your package manager.</li>
-    <li><strong>Use strong passwords:</strong> Always use complex, unique passwords for your user accounts, and avoid using the same password across different services.</li>
-    <li><strong>Limit root access:</strong> Avoid running commands as the root user unless absolutely necessary. Use `sudo` for administrative tasks.</li>
-    <li><strong>Enable a firewall:</strong> Make sure your system's firewall is enabled to block unnecessary incoming connections and monitor network traffic.</li>
-    <li><strong>Be careful with third-party software:</strong> While Linux is less susceptible to malware, be cautious when installing software from third-party sources. Additionally, avoid using Wine (Windows compatibility layer), as it may introduce vulnerabilities by running potentially untrusted Windows applications.</li>
-    <li><strong>Quit using Microsoft:</strong> While Microsoft has been around for a long time, they collect data on their users. By switching to open-source alternatives, you can regain more control over your privacy and avoid unnecessary data collection.</li>
-  </ul>
-</section>
+    <section class="security-tips">
+      <h4>How to Keep Your Linux System Secure</h4>
+      <p>Although Linux systems are generally more secure, it's important to follow best practices to ensure your system remains safe. Here are some important security tips:</p>
+      <ul>
+        <li><strong>Keep your system up to date:</strong> Regularly update your system to install the latest security patches and updates from your package manager.</li>
+        <li><strong>Use strong passwords:</strong> Always use complex, unique passwords for your user accounts, and avoid using the same password across different services.</li>
+        <li><strong>Limit root access:</strong> Avoid running commands as the root user unless absolutely necessary. Use `sudo` for administrative tasks.</li>
+        <li><strong>Enable a firewall:</strong> Make sure your system's firewall is enabled to block unnecessary incoming connections and monitor network traffic.</li>
+        <li><strong>Be careful with third-party software:</strong> While Linux is less susceptible to malware, be cautious when installing software from third-party sources. Additionally, avoid using Wine (Windows compatibility layer), as it may introduce vulnerabilities by running potentially untrusted Windows applications.</li>
+        <li><strong>Quit using Microsoft:</strong> While Microsoft has been around for a long time, they collect data on their users. By switching to open-source alternatives, you can regain more control over your privacy and avoid unnecessary data collection.</li>
+      </ul>
+    </section>
 
-
-
-
+    <!-- Licensing Section -->
+    <section class="license-section">
+      <h4>Licensing Information</h4>
+      <p>WhiskerDE is released under the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU General Public License (GPL) v3.0</a>, which means that you are free to use, modify, and distribute this software, as long as you adhere to the terms of the license.</p>
+      <p>This software comes with no warranty, expressed or implied. For full details on licensing, please visit the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU GPL v3.0 License page</a>.</p>
+    </section>
   </main>
 
   <footer>
-    <p id="footer-text">WhiskerDE Group (2024) - Licensed under the GNU General Public License</p>
+    <p id="footer-text">WhiskerDE Group (2024) - Licensed under the GNU General Public License (GPL) v3.0</p>
   </footer>
 
   <!-- Bootstrap JS and dependencies -->
@@ -227,6 +238,8 @@
         document.getElementById('feature-4-title').innerHTML = 'Código abierto y respaldado por la comunidad';
         document.getElementById('feature-4-description').innerHTML = 'De código abierto y respaldado por la comunidad, lo que permite contribuciones y mejoras.';
         document.getElementById('footer-text').innerHTML = 'WhiskerDE Group (2024) - Licenciado bajo la Licencia Pública General de GNU';
+        document.querySelector('.license-section h4').innerHTML = 'Información de Licencia';
+        document.querySelector('.license-section p').innerHTML = 'WhiskerDE se publica bajo la <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">Licencia Pública General GNU (GPL) v3.0</a>, lo que significa que puede usar, modificar y distribuir este software, siempre que cumpla con los términos de la licencia.';
       } else {
         // Switch back to English
         document.getElementById('title').innerHTML = 'WhiskerDE';
@@ -242,7 +255,9 @@
         document.getElementById('feature-3-description').innerHTML = 'An easy-to-use system control panel for configuration and management.';
         document.getElementById('feature-4-title').innerHTML = 'Open-Source & Community-Supported';
         document.getElementById('feature-4-description').innerHTML = 'Open-source and community-supported, allowing for contributions and improvements.';
-        document.getElementById('footer-text').innerHTML = 'WhiskerDE Group (2024) - Licensed under the GNU General Public License';
+        document.getElementById('footer-text').innerHTML = 'WhiskerDE Group (2024) - Licensed under the GNU General Public License (GPL) v3.0';
+        document.querySelector('.license-section h4').innerHTML = 'Licensing Information';
+        document.querySelector('.license-section p').innerHTML = 'WhiskerDE is released under the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU General Public License (GPL) v3.0</a>, which means that you are free to use, modify, and distribute this software, as long as you adhere to the terms of the license.';
       }
     });
   </script>
