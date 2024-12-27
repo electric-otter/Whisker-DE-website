@@ -57,150 +57,108 @@
       border: none;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
-      margin-bottom: 3rem;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-    .card-body {
-      padding: 2.5rem;
-    }
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-    .btn-primary {
-      background-color: #007bff;
-      border-color: #007bff;
-      padding: 14px 30px;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      font-weight: 600;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
       transition: all 0.3s ease;
     }
-    .btn-primary:hover {
-      background-color: #0056b3;
-      border-color: #0056b3;
-      transform: scale(1.05);
+    .card:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+    }
+    .card-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #1d3557;
+    }
+    .card-body {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
     }
     footer {
-      text-align: center;
       background-color: #1d3557;
       color: white;
       padding: 2rem;
+      text-align: center;
       font-size: 0.875rem;
-      margin-top: 5rem;
     }
-    .language-select {
-      margin-top: 3rem;
-      width: 200px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .license-section {
-      background-color: #ffffff;
-      padding: 3rem;
-      margin-top: 3rem;
-      border-top: 2px solid #007bff;
-    }
-    .license-section h4 {
+    footer a {
+      color: white;
+      text-decoration: none;
       font-weight: 600;
     }
-    /* Lottie animation container */
-    #lottie-animation {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 120px;
-      height: 120px;
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .download-btn {
+      padding: 1rem 2rem;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.125rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .download-btn:hover {
+      background-color: #ff4a3d;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header Section -->
   <header>
-    <h1 id="title">WhiskerDE</h1>
-    <div id="lottie-animation"></div>
-    <a href="https://github.com/electric-otter/Whisker-DE" target="_blank">
-      <i class="fab fa-github"></i> GitHub
-    </a>
+    <div id="lottie-animation" style="height: 250px; width: 250px; margin: 0 auto;"></div>
+    <h1>Welcome to WhiskerDE</h1>
+    <p>Your freedom to customize and explore the open-source desktop environment.</p>
+    <a href="https://github.com/WhiskerDE" target="_blank">Visit the GitHub repository</a>
   </header>
 
+  <!-- Main Content Section -->
   <main>
-    <div>
-      <h2 id="subtitle">Access things freely, with simplicity and efficiency.</h2>
-      <p id="description">WhiskerDE is a modern and user-friendly Linux Desktop Environment designed for those who value a clean interface, performance, and openness.</p>
-      <select id="language-selector" class="form-control language-select">
-        <option value="en">English</option>
-        <option value="es">Español</option>
-      </select>
-      <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="btn btn-primary mt-3" id="download-btn">Download Latest Release (v1.0.0)</a>
+    <div class="card">
+      <h2 class="card-title">What is WhiskerDE?</h2>
+      <div class="card-body">
+        <p>WhiskerDE is a modern, lightweight, and customizable desktop environment built for simplicity and efficiency. With an intuitive interface and powerful features, it's the perfect choice for users who appreciate minimalism and flexibility.</p>
+      </div>
     </div>
 
-    <section>
-      <h2 id="features-title" class="text-center mt-5 mb-4">Features</h2>
-      <div class="row">
-        <!-- Each feature card -->
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <i class="fas fa-desktop feature-icon"></i>
-              <h5 class="card-title" id="feature-1-title">Intuitive GUI</h5>
-              <p id="feature-1-description">An intuitive and user-friendly GUI for seamless navigation.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Repeat for other features... -->
+    <div class="card">
+      <h2 class="card-title">Features</h2>
+      <div class="card-body">
+        <ul>
+          <li>Fully customizable user interface</li>
+          <li>Efficient performance for older hardware</li>
+          <li>Easy integration with your favorite Linux distributions</li>
+          <li>Powerful, user-friendly tools for daily use</li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-    <section class="license-section">
-      <h4>Licensing Information</h4>
-      <p>WhiskerDE is released under the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU General Public License (GPL) v3.0</a>, which means that you are free to use, modify, and distribute this software, as long as you adhere to the terms of the license.</p>
-      <p>This software comes with no warranty, expressed or implied. For full details on licensing, please visit the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GNU GPL v3.0 License page</a>.</p>
-    </section>
+    <button class="download-btn" onclick="window.location.href='https://github.com/WhiskerDE/Download'">Download WhiskerDE</button>
   </main>
 
+  <!-- Footer Section -->
   <footer>
-    <p id="footer-text">WhiskerDE Group (2024) - Licensed under the GNU General Public License (GPL) v3.0</p>
+    <p>&copy; 2024 WhiskerDE. All Rights Reserved.</p>
+    <p><a href="https://github.com/WhiskerDE" target="_blank">View on GitHub</a></p>
   </footer>
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <!-- Lottie Animation Initialization -->
   <script>
-    // Initialize Lottie animation
     var animation = lottie.loadAnimation({
       container: document.getElementById('lottie-animation'),
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: 'https://assets8.lottiefiles.com/packages/lf20_XgYKeB.json' // Replace with a Lottie animation of your choice
-    });
-
-    // Language switch functionality
-    document.getElementById('language-selector').addEventListener('change', function() {
-      var lang = this.value;
-      if (lang === 'es') {
-        // Switch to Spanish
-        document.getElementById('title').innerHTML = 'WhiskerDE';
-        document.getElementById('subtitle').innerHTML = 'Accede a las cosas libremente, con simplicidad y eficiencia.';
-        document.getElementById('description').innerHTML = 'WhiskerDE es un entorno de escritorio Linux moderno y fácil de usar, diseñado para aquellos que valoran una interfaz limpia, el rendimiento y la apertura.';
-        document.getElementById('download-btn').innerHTML = 'Descargar la última versión (v1.0.0)';
-      } else {
-        // Switch back to English
-        document.getElementById('title').innerHTML = 'WhiskerDE';
-        document.getElementById('subtitle').innerHTML = 'Access things freely, with simplicity and efficiency.';
-        document.getElementById('description').innerHTML = 'WhiskerDE is a modern and user-friendly Linux Desktop Environment designed for those who value a clean interface, performance, and openness.';
-        document.getElementById('download-btn').innerHTML = 'Download Latest Release (v1.0.0)';
-      }
+      path: 'https://assets7.lottiefiles.com/packages/lf20_YhnByS.json'  // Replace with your Lottie JSON path
     });
   </script>
+
+  <!-- Bootstrap JS (optional for interactive elements like modals) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
 
