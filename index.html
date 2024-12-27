@@ -4,114 +4,185 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WhiskerDE</title>
-  <!-- Bootstrap CSS -->
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap 4.5.2 -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #121212;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
     }
     h1, h2 {
-      color: #fff;
+      color: #333;
+      font-weight: 600;
     }
     p {
-      font-size: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.6;
     }
-    header, footer {
-      background-color: #1f1f1f;
+    header {
+      background-color: #1d3557;
       color: white;
-      padding: 1rem 0;
+      padding: 2rem 0;
+      text-align: center;
     }
-    .card {
-      background-color: #242424;
-      border: none;
-      margin-bottom: 1rem;
-    }
-    .card-body {
-      color: white;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .feature-icon {
-      margin-right: 0.5rem;
-    }
-    .github-icon {
+    header a {
       color: white;
       font-size: 1.5rem;
+      text-decoration: none;
+    }
+    header a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .card {
+      background-color: white;
+      border: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-body {
+      padding: 2rem;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
     }
     .btn-primary {
       background-color: #007bff;
       border-color: #007bff;
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
     }
     .btn-primary:hover {
       background-color: #0056b3;
       border-color: #0056b3;
     }
-    .list-unstyled li {
-      margin-bottom: 0.5rem;
+    footer {
+      text-align: center;
+      background-color: #1d3557;
+      color: white;
+      padding: 2rem;
+      font-size: 0.875rem;
+    }
+    .feature-icon {
+      font-size: 2rem;
+      color: #007bff;
+      margin-right: 10px;
+    }
+    .language-select {
+      margin-top: 2rem;
+      width: 200px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
 <body>
-  <header class="d-flex justify-content-between align-items-center px-4">
-    <h1 id="title">WhiskerDE</h1>
-    <a href="https://github.com/electric-otter/Whisker-DE" target="_blank" class="github-icon">
-      <i class="fab fa-github"></i>
+  <header>
+    <h1>WhiskerDE</h1>
+    <a href="https://github.com/electric-otter/Whisker-DE" target="_blank">
+      <i class="fab fa-github"></i> GitHub
     </a>
   </header>
-  <main class="container">
-    <div class="text-center mt-4">
-      <h2 id="subtitle">Access things freely, with simplicity and efficiency.</h2>
+
+  <main>
+    <div class="text-center">
+      <h2>Access things freely, with simplicity and efficiency.</h2>
       <p>WhiskerDE is a modern and user-friendly Linux Desktop Environment designed for those who value a clean interface, performance, and openness.</p>
-      <select id="language-selector" class="form-control w-25 mx-auto mb-2">
+      <select id="language-selector" class="form-control language-select">
         <option value="en">English</option>
-        <option value="es">Spanish</option>
+        <option value="es">Español</option>
       </select>
-      <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="btn btn-primary mt-2">Download Latest Release (v1.0.0)</a>
-      <p class="mt-4">We're excited to announce our launch! Join our journey and become part of the WhiskerDE community.</p>
-      <p>Here's how you can help us improve and grow:</p>
-      <ul class="list-unstyled">
-        <li><i class="fas fa-users feature-icon"></i>Join our community forums and chat</li>
-        <li><i class="fas fa-bug feature-icon"></i>Report bugs or issues you encounter</li>
-        <li><i class="fas fa-code-branch feature-icon"></i>Contribute to our open-source codebase</li>
-      </ul>
+      <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="btn btn-primary mt-3">Download Latest Release (v1.0.0)</a>
     </div>
+
     <section>
-      <h2 class="mb-4" id="features-title">Features</h2>
-      <div class="card">
-        <div class="card-body">
-          <p class="feature" data-en="<i class='fas fa-desktop feature-icon'></i>An intuitive and user-friendly GUI." data-es="<i class='fas fa-desktop feature-icon'></i>Una interfaz gráfica intuitiva y fácil de usar."><i class="fas fa-desktop feature-icon"></i>An intuitive and user-friendly GUI for seamless navigation.</p>
+      <h2 class="text-center mt-5 mb-4">Features</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-desktop feature-icon"></i>
+                <div>
+                  <h5 class="card-title">Intuitive GUI</h5>
+                  <p>An intuitive and user-friendly GUI for seamless navigation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <p class="feature" data-en="<i class='fas fa-window-maximize feature-icon'></i>A customizable window manager GUI." data-es="<i class='fas fa-window-maximize feature-icon'></i>Una GUI personalizable de gestor de ventanas."><i class="fas fa-window-maximize feature-icon"></i>A customizable window manager GUI for managing windows efficiently.</p>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-window-maximize feature-icon"></i>
+                <div>
+                  <h5 class="card-title">Customizable Window Manager</h5>
+                  <p>A customizable window manager GUI for managing windows efficiently.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <p class="feature" data-en="<i class='fas fa-cogs feature-icon'></i>An easy-to-use system control panel." data-es="<i class='fas fa-cogs feature-icon'></i>Un panel de control del sistema fácil de usar."><i class="fas fa-cogs feature-icon"></i>An easy-to-use system control panel for configuration and management.</p>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-cogs feature-icon"></i>
+                <div>
+                  <h5 class="card-title">Easy-to-Use Control Panel</h5>
+                  <p>An easy-to-use system control panel for configuration and management.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <p class="feature" data-en="<i class='fas fa-code-branch feature-icon'></i>Open-source and community-supported." data-es="<i class='fas fa-code-branch feature-icon'></i>Código abierto y respaldado por la comunidad."><i class="fas fa-code-branch feature-icon"></i>Open-source and community-supported, allowing for contributions and improvements.</p>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-code-branch feature-icon"></i>
+                <div>
+                  <h5 class="card-title">Open-Source & Community-Supported</h5>
+                  <p>Open-source and community-supported, allowing for contributions and improvements.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
-  <footer class="text-center mt-4">
-    <p id="footer-text">WhiskerDE Group (2024) - Licensed under the GNU General Public License</p>
+
+  <footer>
+    <p>WhiskerDE Group (2024) - Licensed under the GNU General Public License</p>
   </footer>
+
   <!-- Bootstrap JS and dependencies -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <script>
     document.getElementById('language-selector').addEventListener('change', function() {
       var lang = this.value;
