@@ -6,47 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whisker Linux</title>
     <style>
-   body {
-    font-family: Verdana, Arial, sans-serif;
-    background-color: #d0d0d0;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 header {
-    background-color: #000080;
-    color: #ffffff;
+    background-color: #0073e6;
+    color: #fff;
     text-align: center;
-    padding: 15px;
-    font-size: 1.8em;
+    padding: 20px;
+    font-size: 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2em;
     margin: 0;
+    font-size: 2.5em;
 }
 
 section {
-    background-color: #ffffff;
-    padding: 15px;
-    margin: 20px;
-    border: 2px solid #000080;
-    font-size: 1em;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .content {
-    width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 footer {
-    background-color: #000080;
-    color: #ffffff;
+    background-color: #0073e6;
+    color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     font-size: 1em;
-    position: relative;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 footer p {
@@ -56,44 +60,46 @@ footer p {
 .license {
     font-size: 0.75em;
     margin-top: 10px;
-    color: #808080;
+    color: #ccc;
 }
 
 a {
-    color: #0000ee;
-    text-decoration: underline;
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
-    color: #ff0000;
+    color: #005bb5;
 }
 
 .main-content h2 {
-    font-size: 1.6em;
-    color: #000000;
+    font-size: 2em;
+    color: #000;
 }
 
 .main-content p {
-    font-size: 1em;
-    color: #333333;
+    font-size: 1.2em;
+    color: #555;
 }
 
 .download-btn {
-    background-color: #0000ee;
-    color: #ffffff;
-    padding: 10px 15px;
-    font-size: 1em;
-    border: 2px solid #0000ee;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .download-btn:hover {
-    background-color: #ff0000;
-    color: #ffffff;
-    border: 2px solid #ff0000;
+    background-color: #005bb5;
+    transform: scale(1.05);
 }
+
 
     </style>
 </head>
