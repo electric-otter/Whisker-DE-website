@@ -98,7 +98,7 @@
 </head>
 <body>
   <header>
-    <h1>WhiskerDE</h1>
+    <h1 id="title">WhiskerDE</h1>
     <a href="https://github.com/electric-otter/Whisker-DE" target="_blank">
       <i class="fab fa-github"></i> GitHub
     </a>
@@ -106,17 +106,17 @@
 
   <main>
     <div class="text-center">
-      <h2>Access things freely, with simplicity and efficiency.</h2>
-      <p>WhiskerDE is a modern and user-friendly Linux Desktop Environment designed for those who value a clean interface, performance, and openness.</p>
+      <h2 id="subtitle">Access things freely, with simplicity and efficiency.</h2>
+      <p id="description">WhiskerDE is a modern and user-friendly Linux Desktop Environment designed for those who value a clean interface, performance, and openness.</p>
       <select id="language-selector" class="form-control language-select">
         <option value="en">English</option>
         <option value="es">Español</option>
       </select>
-      <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="btn btn-primary mt-3">Download Latest Release (v1.0.0)</a>
+      <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="btn btn-primary mt-3" id="download-btn">Download Latest Release (v1.0.0)</a>
     </div>
 
     <section>
-      <h2 class="text-center mt-5 mb-4">Features</h2>
+      <h2 id="features-title" class="text-center mt-5 mb-4">Features</h2>
       <div class="row">
         <div class="col-md-6">
           <div class="card">
@@ -124,8 +124,8 @@
               <div class="d-flex align-items-center">
                 <i class="fas fa-desktop feature-icon"></i>
                 <div>
-                  <h5 class="card-title">Intuitive GUI</h5>
-                  <p>An intuitive and user-friendly GUI for seamless navigation.</p>
+                  <h5 class="card-title" id="feature-1-title">Intuitive GUI</h5>
+                  <p id="feature-1-description">An intuitive and user-friendly GUI for seamless navigation.</p>
                 </div>
               </div>
             </div>
@@ -137,8 +137,8 @@
               <div class="d-flex align-items-center">
                 <i class="fas fa-window-maximize feature-icon"></i>
                 <div>
-                  <h5 class="card-title">Customizable Window Manager</h5>
-                  <p>A customizable window manager GUI for managing windows efficiently.</p>
+                  <h5 class="card-title" id="feature-2-title">Customizable Window Manager</h5>
+                  <p id="feature-2-description">A customizable window manager GUI for managing windows efficiently.</p>
                 </div>
               </div>
             </div>
@@ -150,8 +150,8 @@
               <div class="d-flex align-items-center">
                 <i class="fas fa-cogs feature-icon"></i>
                 <div>
-                  <h5 class="card-title">Easy-to-Use Control Panel</h5>
-                  <p>An easy-to-use system control panel for configuration and management.</p>
+                  <h5 class="card-title" id="feature-3-title">Easy-to-Use Control Panel</h5>
+                  <p id="feature-3-description">An easy-to-use system control panel for configuration and management.</p>
                 </div>
               </div>
             </div>
@@ -163,8 +163,8 @@
               <div class="d-flex align-items-center">
                 <i class="fas fa-code-branch feature-icon"></i>
                 <div>
-                  <h5 class="card-title">Open-Source & Community-Supported</h5>
-                  <p>Open-source and community-supported, allowing for contributions and improvements.</p>
+                  <h5 class="card-title" id="feature-4-title">Open-Source & Community-Supported</h5>
+                  <p id="feature-4-description">Open-source and community-supported, allowing for contributions and improvements.</p>
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@
   </main>
 
   <footer>
-    <p>WhiskerDE Group (2024) - Licensed under the GNU General Public License</p>
+    <p id="footer-text">WhiskerDE Group (2024) - Licensed under the GNU General Public License</p>
   </footer>
 
   <!-- Bootstrap JS and dependencies -->
@@ -184,16 +184,42 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script>
+    // Language switch functionality
     document.getElementById('language-selector').addEventListener('change', function() {
       var lang = this.value;
-      document.getElementById('title').innerHTML = lang === 'es' ? 'WhiskerDE - Accede a las cosas libremente.' : 'WhiskerDE - Access things freely.';
-      document.getElementById('subtitle').innerHTML = lang === 'es' ? 'Un entorno de escritorio Linux fácil de usar y moderno.' : 'WhiskerDE is a modern and user-friendly Linux Desktop Environment designed for those who value a clean interface, performance, and openness.';
-      document.getElementById('features-title').innerHTML = lang === 'es' ? 'Características' : 'Features';
-      var features = document.querySelectorAll('.feature');
-      features.forEach(function(feature) {
-        feature.innerHTML = feature.getAttribute('data-' + lang);
-      });
-      document.getElementById('footer-text').innerHTML = lang === 'es' ? 'El grupo WhiskerDE (2024) - Licencia Pública General de GNU' : 'WhiskerDE Group (2024) - Licensed under the GNU General Public License';
+      if (lang === 'es') {
+        // Switch to Spanish
+        document.getElementById('title').innerHTML = 'WhiskerDE';
+        document.getElementById('subtitle').innerHTML = 'Accede a las cosas libremente, con simplicidad y eficiencia.';
+        document.getElementById('description').innerHTML = 'WhiskerDE es un entorno de escritorio Linux moderno y fácil de usar, diseñado para aquellos que valoran una interfaz limpia, el rendimiento y la apertura.';
+        document.getElementById('download-btn').innerHTML = 'Descargar la última versión (v1.0.0)';
+        document.getElementById('features-title').innerHTML = 'Características';
+        document.getElementById('feature-1-title').innerHTML = 'Interfaz intuitiva';
+        document.getElementById('feature-1-description').innerHTML = 'Una interfaz gráfica intuitiva y fácil de usar para una navegación fluida.';
+        document.getElementById('feature-2-title').innerHTML = 'Administrador de ventanas personalizable';
+        document.getElementById('feature-2-description').innerHTML = 'Un administrador de ventanas personalizable para gestionar las ventanas de manera eficiente.';
+        document.getElementById('feature-3-title').innerHTML = 'Panel de control fácil de usar';
+        document.getElementById('feature-3-description').innerHTML = 'Un panel de control fácil de usar para la configuración y administración del sistema.';
+        document.getElementById('feature-4-title').innerHTML = 'Código abierto y respaldado por la comunidad';
+        document.getElementById('feature-4-description').innerHTML = 'De código abierto y respaldado por la comunidad, lo que permite contribuciones y mejoras.';
+        document.getElementById('footer-text').innerHTML = 'WhiskerDE Group (2024) - Licenciado bajo la Licencia Pública General de GNU';
+      } else {
+        // Switch back to English
+        document.getElementById('title').innerHTML = 'WhiskerDE';
+        document.getElementById('subtitle').innerHTML = 'Access things freely, with simplicity and efficiency.';
+        document.getElementById('description').innerHTML = 'WhiskerDE is a modern and user-friendly Linux Desktop Environment designed for those who value a clean interface, performance, and openness.';
+        document.getElementById('download-btn').innerHTML = 'Download Latest Release (v1.0.0)';
+        document.getElementById('features-title').innerHTML = 'Features';
+        document.getElementById('feature-1-title').innerHTML = 'Intuitive GUI';
+        document.getElementById('feature-1-description').innerHTML = 'An intuitive and user-friendly GUI for seamless navigation.';
+        document.getElementById('feature-2-title').innerHTML = 'Customizable Window Manager';
+        document.getElementById('feature-2-description').innerHTML = 'A customizable window manager GUI for managing windows efficiently.';
+        document.getElementById('feature-3-title').innerHTML = 'Easy-to-Use Control Panel';
+        document.getElementById('feature-3-description').innerHTML = 'An easy-to-use system control panel for configuration and management.';
+        document.getElementById('feature-4-title').innerHTML = 'Open-Source & Community-Supported';
+        document.getElementById('feature-4-description').innerHTML = 'Open-source and community-supported, allowing for contributions and improvements.';
+        document.getElementById('footer-text').innerHTML = 'WhiskerDE Group (2024) - Licensed under the GNU General Public License';
+      }
     });
   </script>
 </body>
