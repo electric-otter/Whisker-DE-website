@@ -11,40 +11,46 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #121212;
+            color: #ffffff;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
             width: 80%;
+            max-width: 900px;
             margin: 20px auto;
-            background-color: #ffffff;
-            border: 1px solid #cccccc;
+            background-color: #1f1f1f;
+            border: none;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
         }
         .header {
-            background-color: #4c51bf;
+            background-color: #272727;
             color: #ffffff;
             text-align: center;
             padding: 20px;
             margin-bottom: 20px;
-            border-radius: 10px 10px 0 0;
+            border-radius: 15px 15px 0 0;
         }
         .header h1 {
             margin: 0;
             font-size: 32px;
+            font-weight: 700;
         }
         .content {
             padding: 20px;
-            color: #333333;
+            color: #e0e0e0;
         }
         .content h2 {
             font-size: 28px;
             margin-bottom: 15px;
+            color: #ffffff;
         }
         .content p {
             margin-bottom: 20px;
@@ -57,12 +63,13 @@
             margin-bottom: 10px;
         }
         .footer {
-            background-color: #f4f4f4;
+            background-color: #272727;
+            color: #ffffff;
             text-align: center;
             padding: 20px;
-            border-top: 1px solid #cccccc;
+            border-top: none;
             margin-top: 20px;
-            border-radius: 0 0 10px 10px;
+            border-radius: 0 0 15px 15px;
         }
         .footer p {
             margin: 5px 0;
@@ -71,76 +78,82 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #4c51bf;
+            background-color: #bb86fc;
             color: #ffffff;
             padding: 15px 20px;
             text-decoration: none;
             margin: 0 auto;
             text-align: center;
-            border-radius: 5px;
+            border-radius: 30px;
             transition: background-color 0.3s, transform 0.3s;
             font-size: 18px;
         }
+        .download-btn i {
+            margin-right: 10px;
+        }
         .download-btn:hover {
-            background-color: #3b41a1;
+            background-color: #9858e6;
             transform: scale(1.05);
         }
         .dark-mode-toggle {
             display: block;
-            background-color: #4c51bf;
+            background-color: #bb86fc;
             color: #ffffff;
             padding: 15px 20px;
             text-decoration: none;
             margin: 20px auto 0;
             text-align: center;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
         }
+        .dark-mode-toggle i {
+            margin-right: 10px;
+        }
         .dark-mode-toggle:hover {
-            background-color: #3b41a1;
+            background-color: #9858e6;
             transform: scale(1.05);
         }
-        body.dark-mode {
-            background-color: #181818;
+        body.light-mode {
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+        .container.light-mode {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header.light-mode {
+            background-color: #4c51bf;
             color: #ffffff;
         }
-        .container.dark-mode {
-            background-color: #2e2e2e;
-            border: 1px solid #444444;
+        .content.light-mode h2 {
+            color: #333333;
         }
-        .header.dark-mode {
-            background-color: #3e4451;
-            color: #ffffff;
+        .footer.light-mode {
+            background-color: #f4f4f4;
+            color: #333333;
         }
-        .content.dark-mode {
-            color: #ffffff;
+        .download-btn.light-mode {
+            background-color: #4c51bf;
         }
-        .content.dark-mode h2 {
-            color: #bb86fc;
+        .download-btn.light-mode:hover {
+            background-color: #3b41a1;
         }
-        .footer.dark-mode {
-            background-color: #3e4451;
-            color: #ffffff;
+        .dark-mode-toggle.light-mode {
+            background-color: #4c51bf;
         }
-        .footer.dark-mode a {
-            color: #bb86fc;
-        }
-        .download-btn.dark-mode {
-            background-color: #bb86fc;
-        }
-        .download-btn.dark-mode:hover {
-            background-color: #9858e6;
+        .dark-mode-toggle.light-mode:hover {
+            background-color: #3b41a1;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class="container light-mode" id="mainContainer">
+        <div class="header light-mode" id="header">
             <h1>WhiskerDE</h1>
         </div>
 
-        <div class="content">
+        <div class="content light-mode" id="content">
             <h2>Welcome to WhiskerDE</h2>
             <p>WhiskerDE is a fast, customizable, and user-friendly Linux Desktop Environment (DE) designed for productivity and ease of use.</p>
 
@@ -155,32 +168,35 @@
 
             <h2>Download WhiskerDE</h2>
             <p>Get the latest release of WhiskerDE from our GitHub page:</p>
-            <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="download-btn">
-                <i class="fab fa-github"></i>
+            <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="download-btn light-mode" id="downloadBtn">
+                <i class="fab fa-github"></i> Download
             </a>
 
-            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            <button class="dark-mode-toggle light-mode" id="darkModeToggle" onclick="toggleDarkMode()">
+                <i class="fas fa-adjust"></i> Toggle Dark Mode
+            </button>
         </div>
 
-        <div class="footer">
+        <div class="footer light-mode" id="footer">
             <p>&copy; 2024 WhiskerDE</p>
             <p class="license">
-                This project is licensed under the <a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU General Public License v3.0</a>.
+                This project is licensed under the <a href="https://www.gnu.org/licenses/lgpl-3.0.html" class="light-mode-link">GNU General Public License v3.0</a>.
             </p>
         </div>
     </div>
 
     <script>
         function toggleDarkMode() {
-            const isDarkMode = document.body.classList.toggle('dark-mode');
-            document.querySelector('.container').classList.toggle('dark-mode');
-            document.querySelector('.header').classList.toggle('dark-mode');
-            document.querySelector('.content').classList.toggle('dark-mode');
-            document.querySelector('.footer').classList.toggle('dark-mode');
-            document.querySelector('.download-btn').classList.toggle('dark-mode');
-            document.querySelector('.dark-mode-toggle').classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+            document.getElementById('mainContainer').classList.toggle('light-mode');
+            document.getElementById('header').classList.toggle('light-mode');
+            document.getElementById('content').classList.toggle('light-mode');
+            document.getElementById('footer').classList.toggle('light-mode');
+            document.getElementById('downloadBtn').classList.toggle('light-mode');
+            document.getElementById('darkModeToggle').classList.toggle('light-mode');
             
-            if (!isDarkMode) {
+            const isLightMode = document.body.classList.contains('light-mode');
+            if (isLightMode) {
                 alert('You are now in light mode. This may strain your eyes in low light conditions.');
             } else {
                 alert('You are now in dark mode. This may affect readability in bright environments.');
@@ -189,3 +205,4 @@
     </script>
 </body>
 </html>
+
