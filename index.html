@@ -37,11 +37,31 @@
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .header h1 {
             margin: 0;
             font-size: 32px;
             font-weight: 700;
+        }
+        .header .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .auth-button {
+            background-color: #bb86fc;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .auth-button:hover {
+            background-color: #9858e6;
+            transform: scale(1.05);
         }
         .content {
             padding: 20px;
@@ -151,6 +171,10 @@
     <div class="container light-mode" id="mainContainer">
         <div class="header light-mode" id="header">
             <h1>WhiskerDE</h1>
+            <div class="auth-buttons">
+                <a href="signup.html" class="auth-button">Create Account</a>
+                <a href="login.html" class="auth-button">Sign In</a>
+            </div>
         </div>
 
         <div class="content light-mode" id="content">
@@ -205,4 +229,5 @@
     </script>
 </body>
 </html>
+
 
