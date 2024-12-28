@@ -1,141 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhiskerDE</title>
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.container {
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    max-width: 800px;
-    width: 100%;
-    margin: 20px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.header {
-    background-color: #4c51bf;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-}
-.header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-.content {
-    padding: 30px 20px;
-    color: #333333;
-}
-.content h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-.content p {
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-.content ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-.content ul li {
-    margin-bottom: 10px;
-    padding-left: 15px;
-    position: relative;
-}
-.content ul li::before {
-    content: '\f00c';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    color: #5a67d8;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.footer {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: #777777;
-}
-.footer a {
-    color: #5a67d8;
-    text-decoration: none;
-}
-.footer a:hover {
-    text-decoration: underline;
-}
-.download-btn {
-    display: inline-block;
-    background-color: #5a67d8;
-    color: #ffffff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-.download-btn:hover {
-    background-color: #434190;
-    transform: scale(1.05);
-}
-
-
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            padding: 20px;
+        }
+        .header {
+            background-color: #4c51bf;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .content {
+            padding: 10px;
+            color: #333333;
+        }
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .content ul {
+            padding-left: 20px;
+        }
+        .content ul li {
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #cccccc;
+            margin-top: 20px;
+        }
+        .download-btn {
+            display: block;
+            width: fit-content;
+            background-color: #4c51bf;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #3b41a1;
+            transform: scale(1.05);
+        }
+        .dark-mode-toggle {
+            margin-top: 20px;
+            display: block;
+            width: fit-content;
+            background-color: #4c51bf;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 20px auto;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .dark-mode-toggle:hover {
+            background-color: #3b41a1;
+            transform: scale(1.05);
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container.dark-mode {
+            background-color: #333333;
+        }
+        .header.dark-mode {
+            background-color: #1f2937;
+        }
+        .content.dark-mode h2 {
+            color: #bb86fc;
+        }
+        .footer.dark-mode {
+            background-color: #1f2937;
+        }
+        .footer.dark-mode a {
+            color: #bb86fc;
+        }
+        .download-btn.dark-mode {
+            background-color: #bb86fc;
+        }
+        .download-btn.dark-mode:hover {
+            background-color: #9858e6;
+        }
     </style>
 </head>
-
 <body>
-    <header>
-        <h1>WhiskerDE</h1>
-    </header>
+    <div class="container">
+        <div class="header">
+            <h1>WhiskerDE</h1>
+        </div>
 
-    <section class="content main-content">
-        <h2>Welcome to WhiskerDE</h2>
-        <p>WhiskerDE is a fast, customizable, and user-friendly Linux Desktop Environment (DE) designed for productivity and ease of use.</p>
+        <div class="content">
+            <h2>Welcome to WhiskerDE</h2>
+            <p>WhiskerDE is a fast, customizable, and user-friendly Linux Desktop Environment (DE) designed for productivity and ease of use.</p>
 
-        <h2>Features</h2>
-        <p>WhiskerDE comes with a wide range of features that are designed to enhance your desktop experience:</p>
-        <ul>
-            <li>Stable and intuitive user interface</li>
-            <li>Highly customizable with themes and plugins</li>
-            <li>Optimized for performance and resource efficiency</li>
-            <li>Minimalistic yet powerful design</li>
-        </ul>
+            <h2>Features</h2>
+            <p>WhiskerDE comes with a wide range of features that are designed to enhance your desktop experience:</p>
+            <ul>
+                <li>Stable and intuitive user interface</li>
+                <li>Highly customizable with themes and plugins</li>
+                <li>Optimized for performance and resource efficiency</li>
+                <li>Minimalistic yet powerful design</li>
+            </ul>
 
-        <h2>Download WhiskerDE</h2>
-        <p>Get the latest release of WhiskerDE from our GitHub page:</p>
-        <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="download-btn" target="_blank">
-            <i class="fab fa-github"></i> Download Latest Release
-        </a>
-    </section>
+            <h2>Download WhiskerDE</h2>
+            <p>Get the latest release of WhiskerDE from our GitHub page:</p>
+            <a href="https://github.com/electric-otter/Whisker-DE/releases/latest" class="download-btn">Download Latest Release</a>
 
-    <footer>
-        <p>&copy; 2024 WhiskerDE</p>
-        <p class="license">
-            This project is licensed under the <a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank">GNU General Public License v3.0</a>.
-        </p>
-    </footer>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 WhiskerDE</p>
+            <p class="license">
+                This project is licensed under the <a href="https://www.gnu.org/licenses/lgpl-3.0.html">GNU General Public License v3.0</a>.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            document.querySelector('.container').classList.toggle('dark-mode');
+            document.querySelector('.header').classList.toggle('dark-mode');
+            document.querySelector('.content').classList.toggle('dark-mode');
+            document.querySelector('.footer').classList.toggle('dark-mode');
+            document.querySelector('.download-btn').classList.toggle('dark-mode');
+            document.querySelector('.dark-mode-toggle').classList.toggle('dark-mode');
+            
+            if (!isDarkMode) {
+                alert('You are now in light mode. This may strain your eyes in low light conditions.');
+            } else {
+                alert('You are now in dark mode. This may affect readability in bright environments.');
+            }
+        }
+    </script>
 </body>
-
 </html>
