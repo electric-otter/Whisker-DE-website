@@ -10,6 +10,8 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
         .container {
             width: 80%;
@@ -17,6 +19,7 @@
             background-color: #ffffff;
             border: 1px solid #cccccc;
             padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .header {
             background-color: #4c51bf;
@@ -39,6 +42,7 @@
         }
         .content p {
             margin-bottom: 20px;
+            line-height: 1.6;
         }
         .content ul {
             padding-left: 20px;
@@ -53,9 +57,11 @@
             border-top: 1px solid #cccccc;
             margin-top: 20px;
         }
+        .footer p {
+            margin: 5px 0;
+        }
         .download-btn {
             display: block;
-            width: fit-content;
             background-color: #4c51bf;
             color: #ffffff;
             padding: 10px 20px;
@@ -70,14 +76,12 @@
             transform: scale(1.05);
         }
         .dark-mode-toggle {
-            margin-top: 20px;
             display: block;
-            width: fit-content;
             background-color: #4c51bf;
             color: #ffffff;
             padding: 10px 20px;
             text-decoration: none;
-            margin: 20px auto;
+            margin: 20px auto 0;
             text-align: center;
             border-radius: 5px;
             cursor: pointer;
@@ -88,20 +92,21 @@
             transform: scale(1.05);
         }
         body.dark-mode {
-            background-color: #121212;
+            background-color: #181818;
             color: #e0e0e0;
         }
         .container.dark-mode {
-            background-color: #333333;
+            background-color: #2e2e2e;
+            border: 1px solid #444444;
         }
         .header.dark-mode {
-            background-color: #1f2937;
+            background-color: #3e4451;
         }
         .content.dark-mode h2 {
             color: #bb86fc;
         }
         .footer.dark-mode {
-            background-color: #1f2937;
+            background-color: #3e4451;
         }
         .footer.dark-mode a {
             color: #bb86fc;
@@ -167,3 +172,4 @@
     </script>
 </body>
 </html>
+
